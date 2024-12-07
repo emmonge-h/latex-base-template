@@ -16,6 +16,11 @@
 \begin{document}
     \input{titlepage}   % Title page
 
+    % Enable TOC, commands above and below keep it from listing the contents in itself
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+    %\tableofcontents
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
     \unlabeledcountedchapter{Chapter}
     \lipsum[1]
     \section{Section}

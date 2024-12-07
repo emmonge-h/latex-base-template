@@ -54,7 +54,7 @@
     % ############################################################
 
     % Unlabeled chapter that appears on table of contents and counts as a numbered chapter
-    \newcommand{\unlabeledcountingchapter}[1]
+    \newcommand{\unlabeledcountedchapter}[1]
     {
     	\chapter*{#1}
         \markboth{#1}{}
@@ -75,7 +75,7 @@
     }
     
     % Unlabeled section that appears on table of contents and counts as a numbered section
-    \newcommand{\unlabeledcountingsection}[1]
+    \newcommand{\unlabeledcountedsection}[1]
     {
     	\section*{#1}
         \markright{#1}
@@ -94,7 +94,7 @@
     }
     
     % Unlabeled subsection that appears on table of contents and counts as a numbered subsection
-    \newcommand{\unlabeledcountingsubsection}[1]{
+    \newcommand{\unlabeledcountedsubsection}[1]{
     	\subsection*{#1}
     	\addcontentsline{toc}{subsection}{#1}
     	\addtocounter{subsection}{1}

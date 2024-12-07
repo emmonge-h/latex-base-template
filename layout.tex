@@ -1,0 +1,43 @@
+% Margins
+\usepackage[letter, margin=2.54cm]{geometry}
+
+% Headers & Footers
+\usepackage{fancyhdr}
+
+\newcommand{\fancysetup}
+{
+    \fancyhf{}
+    %\leftmark = Current chapter title
+    %\rightmark = Current section title
+    % Header
+    \fancyhead[L]{\doctitle}
+    \fancyhead[C]{\course}
+    \fancyhead[R]{\thepage}
+    \renewcommand{\headrulewidth}{1pt}
+    
+    % Footer
+    \renewcommand{\footrulewidth}{0pt}
+    \fancyfoot[L]{}
+    \fancyfoot[C]{}
+    \fancyfoot[R]{}
+}
+
+% Use the fancyhdr-setup for the 'fancy' page style
+\pagestyle{fancy}
+\fancysetup
+
+% Use the fancyhdr-setup for the 'plain' page style
+\fancypagestyle{plain}
+{
+    \fancysetup
+}
+
+% Line spacing
+\usepackage{setspace}
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+
+% Paragraph indentation and spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}

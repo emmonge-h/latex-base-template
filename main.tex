@@ -1,0 +1,25 @@
+\documentclass[12pt]{report}
+
+% Titlepage
+\def \doctitle{Title}
+\def \author{Author}
+\def \institution{Institution}
+\def \course{Course}
+\def \instructor{Instructor}
+\def \date{Date}
+
+\input{preamble}    % Preamble
+\input{layout}    % Layout
+\input{commands}    % Commands
+
+\begin{document}
+    \input{titlepage}   % Title page
+
+    \unlabeledcountingchapter{Chapter}
+    \lipsum[1]
+    \section{Section}
+    \lipsum[2]
+    \subsection{Subsection}
+    \lipsum[3]
+            
+\end{document}

@@ -1,0 +1,122 @@
+
+\AtBeginDocument
+{
+    % ############################################################
+    % Misc commands (labels, displays, etc...)
+    % ############################################################
+
+    % Customize chapter label
+    \renewcommand{\chaptername}
+    {
+        Chapter
+    }
+
+    % Customize chapter format
+    \titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries} % Format of the title
+    {\chaptername\ \thechapter} % Label text (e.g., Chapter 1)
+    {10pt} % Spacing between label and title
+    {\Huge} % Format of the title itself
+
+    % Adjust spacing before and after the chapter
+    % {Indent} {Space above} {Space below}
+    \titlespacing*{\chapter}{0pt}{-40pt}{0pt}
+
+    % Customize section title
+    \titleformat{\section}
+    {\normalfont\Large\bfseries} % Format of the title
+    {\thesection} % Section number format
+    {5pt} % Space between number and title
+    {} % Title style (empty for no prefix)
+
+    % Adjust spacing before and after sections
+    % {Indent} {Space above} {Space below}
+    \titlespacing*{\section}{0pt}{0pt}{0pt}
+
+    % Customize subsection title
+    \titleformat{\subsection}
+    {\normalfont\large\bfseries} % Format of the title
+    {\thesubsection} % Subsection number format
+    {5pt} % Space between number and title
+    {} % Title style (empty for no prefix)
+
+    % Adjust spacing before and after subsections
+    % {Indent} {Space above} {Space below}
+    \titlespacing*{\subsection}{0pt}{0pt}{0pt}
+
+    % Enable TOC, commands above and below keep it from listing the contents in itself
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+    %\tableofcontents
+    \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+    % ############################################################
+    % Additional commands
+    % ############################################################
+
+    % Unlabeled chapter that appears on table of contents and counts as a numbered chapter
+    \newcommand{\unlabeledcountingchapter}[1]
+    {
+    	\chapter*{#1}
+        \markboth{#1}{}
+    	\addcontentsline{toc}{chapter}{#1}
+    	\addtocounter{chapter}{1}
+    	\setcounter{section}{0}
+    	\setcounter{subsection}{0}
+    }
+
+    % Unlabeled chapter that appears on table of contents
+    \newcommand{\unlabeledchapter}[1]
+    {
+    	\chapter*{#1}
+        \markboth{#1}{}
+    	\addcontentsline{toc}{chapter}{#1}
+    	\setcounter{section}{0}
+    	\setcounter{subsection}{0}
+    }
+    
+    % Unlabeled section that appears on table of contents and counts as a numbered section
+    \newcommand{\unlabeledcountingsection}[1]
+    {
+    	\section*{#1}
+        \markright{#1}
+    	\addcontentsline{toc}{section}{#1}
+    	\addtocounter{section}{1}
+    	\setcounter{subsection}{0}
+    }
+
+    % Unlabeled section that appears on table of contents
+    \newcommand{\unlabeledsection}[1]
+    {
+    	\section*{#1}
+        \markright{#1}
+    	\addcontentsline{toc}{section}{#1}
+    	\setcounter{subsection}{0}
+    }
+    
+    % Unlabeled subsection that appears on table of contents and counts as a numbered subsection
+    \newcommand{\unlabeledcountingsubsection}[1]{
+    	\subsection*{#1}
+    	\addcontentsline{toc}{subsection}{#1}
+    	\addtocounter{subsection}{1}
+    }
+
+    % Unlabeled subsection that appears on table of contents
+    \newcommand{\unlabeledsubsection}[1]
+    {
+    	\subsection*{#1}
+    	\addcontentsline{toc}{subsection}{#1}
+    	\addtocounter{subsection}{1}
+    }
+    
+    % Surrounds with double quotes the given content
+    \newcommand{\dblquotes}[1]
+    {
+    	\hspace{-5pt}{\textquotedblleft}#1{\textquotedblright}\hspace{-5pt}
+    }
+
+    % Numerical sets
+    \newcommand{\R}
+    {
+        \mathbb{R}
+    }
+}

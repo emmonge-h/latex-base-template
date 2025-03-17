@@ -6,16 +6,20 @@
     % ############################################################
 
     % Customize chapter label
-    \renewcommand{\chaptername}
-    {
-        Chapter
-    }
+    \renewcommand{\chaptername}{Chapter}
 
     % Customize contents label
-    \renewcommand{\contentsname}
-    {
-        Contents
-    }
+    \renewcommand{\contentsname}{Contents}
+
+    % Customize table label
+    \renewcommand{\tablename}{Table}
+
+    % Customize figure label
+    \renewcommand{\figurename}{Figure}
+
+    % Customize references and bibliography labels
+    \renewcommand{\refname}{References}
+    \renewcommand{\bibname}{Bibliography}
 
     % Customize chapter format
     \titleformat{\chapter}[display]
@@ -110,34 +114,13 @@
     }
     
     % Surrounds with double quotes the given content
-    \newcommand{\dblquotes}[1]
-    {
-    	\hspace{-5pt}{\textquotedblleft}#1{\textquotedblright}\hspace{-5pt}
-    }
+    \newcommand{\dblquotes}[1]{\hspace{-5pt}{\textquotedblleft}#1{\textquotedblright}\hspace{-5pt}}
 
     % Numerical sets
-    \newcommand{\R}
-    {
-        \mathbb{R}
-    }
-    \newcommand{\Z}
-    {
-        \mathbb{Z}
-    }
-    \newcommand{\Q}
-    {
-        \mathbb{Q}
-    }
-    \newcommand{\C}
-    {
-        \mathbb{C}
-    }
-    \newcommand{\I}
-    {
-        \mathbb{I}
-    }
-    \newcommand{\N}
-    {
-        \mathbb{N}
-    }
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\Q}{\mathbb{Q}}
+    \newcommand{\C}{\mathbb{C}}
+    \newcommand{\I}{\mathbb{I}}
+    \newcommand{\N}{\mathbb{N}}
 }
